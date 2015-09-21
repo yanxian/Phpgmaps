@@ -9,18 +9,18 @@ Currently only Laravel 5.* is supported.
 Add the repo to composer.json under this new namespace:
 ```
   "require": {
-      "genealabs/phpgmaps": "~0.3.0"
+      "dandarie/phpgmaps": "~0.3.4"
   }
 ```
 
 Then add the service provider entry to `config/app.php`:
 ```php
-        'GeneaLabs\Phpgmaps\PhpgmapsServiceProvider',
+        'dandarie\Phpgmaps\PhpgmapsServiceProvider',
 ```
 
 And the Facade (further down in `config/app.php`):
 ```php
-        'Gmaps' => 'GeneaLabs\Phpgmaps\Facades\Phpgmaps',
+        'Gmaps' => 'dandarie\Phpgmaps\Facades\Phpgmaps',
 ```
 
 #Original README

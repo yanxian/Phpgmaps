@@ -1,5 +1,5 @@
 {
-  "name": "genealabs/phpgmaps",
+  "name": "dandarie/phpgmaps",
   "description": "Laravel implementation of BIOSTALL's CodeIgniter Google Maps API, originally by Michael Hopkins at Appitventures.",
   "license": "MIT",
   "keywords": [
@@ -10,12 +10,12 @@
   ],
   "authors": [
     {
-      "name": "Mike Bronner",
-      "email": "mike@genealabs.com",
+      "name": "Dan Darie",
+      "email": "dan@darie.xyz",
       "role": "maintainer"
     },
     {
-      "name": "Michael Hopkins",
+      "name": "Dan Darie",
       "role": "developer"
     }
   ],
@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GeneaLabs\\Phpgmaps\\": "src/GeneaLabs/Phpgmaps/"
+      "dandarie\\Phpgmaps\\": "src/dandarie/Phpgmaps/"
     }
   },
   "extra": {

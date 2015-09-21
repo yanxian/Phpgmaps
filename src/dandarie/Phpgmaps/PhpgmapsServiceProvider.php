@@ -1,6 +1,6 @@
-<?php namespace GeneaLabs\Phpgmaps;
+<?php namespace dandarie\Phpgmaps;
 
-use GeneaLabs\Phpgmaps\Facades\Phpgmaps;
+use dandarie\Phpgmaps\Facades\Phpgmaps;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 

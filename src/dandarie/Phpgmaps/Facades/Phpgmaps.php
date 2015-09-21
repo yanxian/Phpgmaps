@@ -1,4 +1,4 @@
-<?php namespace GeneaLabs\Phpgmaps\Facades;
+<?php namespace dandarie\Phpgmaps\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

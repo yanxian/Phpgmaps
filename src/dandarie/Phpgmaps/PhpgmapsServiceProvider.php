@@ -35,7 +35,7 @@ class PhpgmapsServiceProvider extends ServiceProvider
             $loader->alias('Gmaps', Phpgmaps::class);
         });
         $this->app['phpgmaps'] = $this->app->share(function ($app) {
-            return new Phpgmaps();
+            return new \dandarie\Phpgmaps\Phpgmaps();
         });
     }
 

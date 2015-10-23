@@ -1149,7 +1149,7 @@ class Phpgmaps
             $this->output_js_contents .= 'var placesService;
 			';
             if ($this->placesAutocompleteInputID != "") {
-                $this->output_js_contents .= 'var placesAutocomplete;
+                $this->output_js_contents .= 'var placesAutocomplete'.$this->placesAutocompleteInputID.';
 			';
             }
         }
@@ -1671,7 +1671,7 @@ class Phpgmaps
             }
 
             if ($this->placesAutocompleteInputID != "") {
-                $this->output_js_contents .= 'var autocompleteOptions = {
+                $this->output_js_contents .= 'var autocompleteOptions'.$this->placesAutocompleteInputID.' = {
 					';
                 $autocompleteOptions = '';
                 if ($this->placesAutocompleteBoundSW != "" && $this->placesAutocompleteBoundNE != "") {
@@ -1705,18 +1705,18 @@ class Phpgmaps
                 $this->output_js_contents .= '}';
 
                 $this->output_js_contents .= '
-				var autocompleteInput = document.getElementById(\''.$this->placesAutocompleteInputID.'\');
+				var autocompleteInput'.$this->placesAutocompleteInputID.' = document.getElementById(\''.$this->placesAutocompleteInputID.'\');
 
-				placesAutocomplete = new google.maps.places.Autocomplete(autocompleteInput, autocompleteOptions);
+				placesAutocomplete'.$this->placesAutocompleteInputID.' = new google.maps.places.Autocomplete(autocompleteInput'.$this->placesAutocompleteInputID.', autocompleteOptions'.$this->placesAutocompleteInputID.');
 				';
 
                 if ($this->placesAutocompleteBoundsMap) {
-                    $this->output_js_contents .= 'placesAutocomplete.bindTo(\'bounds\', map);
+                    $this->output_js_contents .= 'placesAutocomplete'.$this->placesAutocompleteInputID.'.bindTo(\'bounds\', map);
 					';
                 }
 
                 if ($this->placesAutocompleteOnChange != "") {
-                    $this->output_js_contents .= 'google.maps.event.addListener(placesAutocomplete, \'place_changed\', function() {
+                    $this->output_js_contents .= 'google.maps.event.addListener(placesAutocomplete'.$this->placesAutocompleteInputID.', \'place_changed\', function() {
 						'.$this->placesAutocompleteOnChange.'
 					});
 					';

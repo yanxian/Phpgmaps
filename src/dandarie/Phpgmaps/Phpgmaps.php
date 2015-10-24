@@ -1711,7 +1711,7 @@ class Phpgmaps
 				';
 
                 if ($this->placesAutocompleteBoundsMap) {
-                    $this->output_js_contents .= 'placesAutocomplete'.$this->placesAutocompleteInputID.'.bindTo(\'bounds\', map);
+                    $this->output_js_contents .= 'placesAutocomplete'.$this->placesAutocompleteInputID.'.bindTo(\'bounds\', '.$map_name.');
 					';
                 }
 
